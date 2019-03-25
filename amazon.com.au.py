@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from datetime import datetime
-
+import pytest
 
 
 class AmazonSpider:
@@ -14,7 +14,8 @@ class AmazonSpider:
 		browser.wait = WebDriverWait(browser, 10)
 		return(browser)
 
-
+	def get_page():
+		pass
 
 
 if __name__ == "__main__":
@@ -26,19 +27,16 @@ if __name__ == "__main__":
 	url = 'https://www.amazon.com.au/'
 
 	browser.get(url)
-	#browser.implicitly_wait(0.1)
 
 	elm = browser.find_element_by_css_selector('.first-carousel > .feed-right')
 	elm.click()
 
-	#browser.implicitly_wait(0.1)
 
 	#elm = browser.find_element_by_css_selector(".feed-carousel-card:nth-child(9) .product-image")
 	elm = browser.find_element_by_xpath("//img[@alt='Pet Supplies']")
 	browser.execute_script("arguments[0].click();", elm)
 	#elm.click()
 
-	#browser.implicitly_wait(0.1)
 
 	elm = browser.find_element_by_xpath("//div[@id='leftNav']/ul/ul/div/li[2]/span/a/span")
 	browser.execute_script("arguments[0].click();", elm)
@@ -48,12 +46,10 @@ if __name__ == "__main__":
 	elm = browser.find_element_by_xpath("//div[@id='leftNav']/ul/ul/div/li[4]/span/a/span")
 	browser.execute_script("arguments[0].click();", elm)
 
-	#browser.implicitly_wait(0.1)
 
 	elm = browser.find_element_by_xpath("//div[@id='anonCarousel1']/ol/li/div/a/span")
 	browser.execute_script("arguments[0].click();", elm)
 
-	#browser.implicitly_wait(0.1)
 
 	elm = browser.find_element_by_xpath("//div[@id='detail_bullets_id']/table/tbody/tr/td/div[2]/ul/li[3]")
 	print(elm.text)
@@ -76,6 +72,12 @@ if __name__ == "__main__":
 	print(string)
 	Date = datetime.strptime(string, '%d,%B,%Y')
 	print(Date.strftime('%Y-%m-%d'))
+
+	now = datetime.now()
+	if (now > Date):
+		print("TRUE")
+	else:
+		print("FALSE")
 
 
 	elm = browser.find_element_by_id("productTitle")
