@@ -25,34 +25,52 @@ if __name__ == "__main__":
 	url = 'https://www.amazon.com.au/'
 
 	browser.get(url)
-	browser.implicitly_wait(1)
+	#browser.implicitly_wait(0.1)
 
 	elm = browser.find_element_by_css_selector('.first-carousel > .feed-right')
 	elm.click()
 
-	browser.implicitly_wait(1)
+	#browser.implicitly_wait(0.1)
 
 	#elm = browser.find_element_by_css_selector(".feed-carousel-card:nth-child(9) .product-image")
 	elm = browser.find_element_by_xpath("//img[@alt='Pet Supplies']")
 	browser.execute_script("arguments[0].click();", elm)
 	#elm.click()
 
-	browser.implicitly_wait(1)
+	#browser.implicitly_wait(0.1)
 
 	elm = browser.find_element_by_xpath("//div[@id='leftNav']/ul/ul/div/li[2]/span/a/span")
 	browser.execute_script("arguments[0].click();", elm)
 
-	browser.implicitly_wait(1)
+	browser.implicitly_wait(0.1)
 
 	elm = browser.find_element_by_xpath("//div[@id='leftNav']/ul/ul/div/li[4]/span/a/span")
 	browser.execute_script("arguments[0].click();", elm)
 
-	browser.implicitly_wait(1)
+	#browser.implicitly_wait(0.1)
 
 	elm = browser.find_element_by_xpath("//div[@id='anonCarousel1']/ol/li/div/a/span")
 	browser.execute_script("arguments[0].click();", elm)
 
+	#browser.implicitly_wait(0.1)
 
+	elm = browser.find_element_by_xpath("//div[@id='detail_bullets_id']/table/tbody/tr/td/div[2]/ul/li[3]")
+	print(elm.text)
+	ASIN = elm.text
+	ASIN = ASIN.split(':')
+	ASIN = ASIN[1] 
+	print(ASIN)
+
+	elm = browser.find_element_by_xpath("//div[@id='detail_bullets_id']/table/tbody/tr/td/div[2]/ul/li[4]")
+	print(elm.text)
+	Date = elm.text
+	Date = Date.split(':')
+	Date = Date[1] 
+	print(Date)
+
+
+	elm = browser.find_element_by_id("productTitle")
+	print(elm.text)
 
 
 
