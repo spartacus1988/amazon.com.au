@@ -1,0 +1,99 @@
+{
+  "id": "23254d11-97e0-471c-a6d0-b9a22a1b1ce8",
+  "version": "2.0",
+  "name": "amazon.com.au_test_cats_clothing",
+  "url": "https://www.amazon.com.au",
+  "tests": [{
+    "id": "a18a0e18-4a32-4899-8b18-1ea3003958db",
+    "name": "nav_chain",
+    "commands": [{
+      "id": "21be4277-8824-4d5b-b836-68de1bbf9225",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "250cd371-b9f2-46ad-b1c2-4db52753da47",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1855x1028",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c266bf52-e1ba-4494-8701-5b0a830db5fe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.first-carousel > .feed-right > .gw-icon",
+      "targets": [
+        ["css=.first-carousel > .feed-right > .gw-icon", "css:finder"],
+        ["xpath=//div[@id='xTSoTKAhAgO5BWzOrX0i6g']/div[2]/a[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/div/div/div/div[2]/a[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb00e986-6de4-4071-af25-a8a567ec5951",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//img[@alt='Pet Supplies']",
+      "targets": [
+        ["css=#l7Sl-1KmiutcEl5naPNPCA .feed-carousel-card:nth-child(9) .product-image", "css:finder"],
+        ["xpath=//img[@alt='Pet Supplies']", "xpath:img"],
+        ["xpath=//div[@id='l7Sl-1KmiutcEl5naPNPCA']/div[2]/div/ul/li[9]/span/a/img", "xpath:idRelative"],
+        ["xpath=//li[9]/span/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed146d3b-f49c-4f02-923b-7662a250101b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-unordered-list:nth-child(2) li:nth-child(2) .a-size-small",
+      "targets": [
+        ["css=.a-unordered-list:nth-child(2) li:nth-child(2) .a-size-small", "css:finder"],
+        ["xpath=//div[@id='leftNav']/ul/ul/div/li[2]/span/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/span/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "37462dc8-c9e0-4667-a9bd-a2c5b09c4a05",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-unordered-list:nth-child(3) li:nth-child(4) .a-size-small",
+      "targets": [
+        ["css=.a-unordered-list:nth-child(3) li:nth-child(4) .a-size-small", "css:finder"],
+        ["xpath=//div[@id='leftNav']/ul/ul/div/li[4]/span/a/span", "xpath:idRelative"],
+        ["xpath=//li[4]/span/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92efa21c-78f4-40ee-9c5f-4fb0d132355f",
+      "comment": "",
+      "command": "click",
+      "target": "css=#anonCarousel1 .a-carousel-card:nth-child(1) > .a-box-group .a-size-small",
+      "targets": [
+        ["css=#anonCarousel1 .a-carousel-card:nth-child(1) > .a-box-group .a-size-small", "css:finder"],
+        ["xpath=//div[@id='anonCarousel1']/ol/li/div/a/span", "xpath:idRelative"],
+        ["xpath=//li/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Vevins Dog Caribbean Pirate Style...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5e40a0e-2b97-45bd-9215-b6822feee6e2",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,46)",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a231ef11-4e8e-4db5-9266-b4ab2d813b63",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a18a0e18-4a32-4899-8b18-1ea3003958db"]
+  }],
+  "urls": ["https://www.amazon.com.au/"],
+  "plugins": []
+}
