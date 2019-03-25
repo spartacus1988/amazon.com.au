@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
+from datetime import datetime
 
 
 
@@ -67,6 +68,14 @@ if __name__ == "__main__":
 	Date = Date.split(':')
 	Date = Date[1] 
 	print(Date)
+	Date = Date.split()
+	d = Date[0]
+	B = Date[1]
+	Y = Date[2]
+	string = str(d +','+ B+','+ Y)
+	print(string)
+	Date = datetime.strptime(string, '%d,%B,%Y')
+	print(Date.strftime('%Y-%m-%d'))
 
 
 	elm = browser.find_element_by_id("productTitle")
